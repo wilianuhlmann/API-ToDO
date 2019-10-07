@@ -1,0 +1,9 @@
+Devera ser desenvolvido uma API para um app ToDo.
+
+Deve ser feito em inglẽs.
+Usuario se cadastrar no sitema.
+Login com token de acesso
+Logout
+Criar Tasks
+Listar tasks
+Editar task

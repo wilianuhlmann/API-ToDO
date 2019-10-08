@@ -6,7 +6,7 @@ from flask_jwt_extended import jwt_required
 class Tasks(Resource):
 
     def get(self):
-        return {'tasks': [task.json() for task in Task.query.all()]}  # Select * From
+        return {'tasks': [task.json() for task in TaskModel.query.all()]}  # Select * From
 
 
 # Pass serve apenas para nao precisar implantar o codifo no momento, não apresentar erro.
@@ -18,16 +18,16 @@ class Task(Resource):
     argumentos.add_argument('cidade')
 
     def get(self, task_id):
-        task = Task.find_task(task_id)
+        task = TaskModel.find_task(task_id)
         if task:
             return task.json()
         return {'message': 'task not found'}, 404  # not found
 
     @jwt_required
     def post(self, task_id):
-        if Task.find_task(task_id):
+        if TaskModel.find_task(task_id):
             return {"message": "task if '{}' already exists.".format(task_id)}, 400  # Bad request
-        dados = task.argumentos.parse_args()
+        dados = Task.argumentos.parse_args()
         task = Task(task_id, **dados)
         try:
             task.save_task()
@@ -38,7 +38,7 @@ class Task(Resource):
     @jwt_required
     def put(self, task_id):
         dados = Task.argumentos.parse_args()
-        task_encontrado = Task.find_task(task_id)
+        task_encontrado = TaskModel.find_task(task_id)
         if task_encontrado:
             task_encontrado.update_task(**dados)
             task_encontrado.save_task()
@@ -52,7 +52,7 @@ class Task(Resource):
 
     @jwt_required
     def delete(self, task_id):
-        task = Task.find_task(task_id)
+        task = TaskModel    .find_task(task_id)
         if task:
             try:
                 task.delete_task()

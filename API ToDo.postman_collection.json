@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "24b702d4-949c-431a-b13f-e97fde7ee074",
+		"name": "API ToDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks/{task_id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTY0NzEsIm5iZiI6MTU3MDQxNjQ3MSwianRpIjoiNDZjOTM3NjctYzEyZS00NzdlLWIzMmItMDVhMjA0MjAwNDlkIiwiZXhwIjoxNTcwNDE3MzcxLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.9VZJb3pTRtTSxZI_duHxKhFCO3UgnisbXifSORjU2ds"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tasks/vender",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"vender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks/{task_id}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTg3MDAsIm5iZiI6MTU3MDQxODcwMCwianRpIjoiZmYzOWQ0ZmItN2ZiZS00NTc1LThhNjEtNmQ2ZjdlYTM2YWRlIiwiZXhwIjoxNTcwNDE5NjAwLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.FrobihykCsz7g1rcQxzmh23jgGac73kLZ8l3BY6I5cA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Cuidar dos cachorros\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participamente\": \"Presença da julia obrigatoria\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tasks/vender",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"vender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks/{task_id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTg3MDAsIm5iZiI6MTU3MDQxODcwMCwianRpIjoiZmYzOWQ0ZmItN2ZiZS00NTc1LThhNjEtNmQ2ZjdlYTM2YWRlIiwiZXhwIjoxNTcwNDE5NjAwLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.FrobihykCsz7g1rcQxzmh23jgGac73kLZ8l3BY6I5cA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Cuidar dos cachorros\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participamente\": \"Presença da julia obrigatoria\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tasks/vender",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"vender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tasks/{task_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTY0NzEsIm5iZiI6MTU3MDQxNjQ3MSwianRpIjoiNDZjOTM3NjctYzEyZS00NzdlLWIzMmItMDVhMjA0MjAwNDlkIiwiZXhwIjoxNTcwNDE3MzcxLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.9VZJb3pTRtTSxZI_duHxKhFCO3UgnisbXifSORjU2ds",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/tasks/vender",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"tasks",
+						"vender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/usuarios/{user_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/usuarios/{user_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/usuarios/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"admin\",\n\t\"senha\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTg3MDAsIm5iZiI6MTU3MDQxODcwMCwianRpIjoiZmYzOWQ0ZmItN2ZiZS00NTc1LThhNjEtNmQ2ZjdlYTM2YWRlIiwiZXhwIjoxNTcwNDE5NjAwLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.FrobihykCsz7g1rcQxzmh23jgGac73kLZ8l3BY6I5cA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cadastro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"admin\",\n\t\"senha\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/cadastro",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cadastro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

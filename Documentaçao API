@@ -1,0 +1,7 @@
+Todas as rotas estão no: "API ToDo.postman_collection.json"
+Para POST, PUT e DELETE o usuario deve fazer registro e login.
+POST para login e register não é necessario login.
+Em Headers deve ser passado:
+Authorization e Bearer
+Em bearer deve ser passado o token que recebeu em login.
+

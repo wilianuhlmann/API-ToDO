@@ -9,13 +9,16 @@ class Tasks(Resource):
         return {'tasks': [task.json() for task in TaskModel.query.all()]}  # Select * From
 
 
-# Pass serve apenas para nao precisar implantar o codifo no momento, não apresentar erro.
 class Task(Resource):
     argumentos = reqparse.RequestParser()
+    # argumentos.add_argument('task_id', type=str, required=True, help="The field 'task' cannot be left blank")
     argumentos.add_argument('nome', type=str, required=True, help="The field 'nome' cannot be left blank")
-    argumentos.add_argument('estrelas')
-    argumentos.add_argument('diaria')
-    argumentos.add_argument('cidade')
+    argumentos.add_argument('descricao')
+    argumentos.add_argument('tipo')
+    argumentos.add_argument('dia')
+    argumentos.add_argument('hora')
+    argumentos.add_argument('local')
+    argumentos.add_argument('participante')
 
     def get(self, task_id):
         task = TaskModel.find_task(task_id)
@@ -28,7 +31,7 @@ class Task(Resource):
         if TaskModel.find_task(task_id):
             return {"message": "task if '{}' already exists.".format(task_id)}, 400  # Bad request
         dados = Task.argumentos.parse_args()
-        task = Task(task_id, **dados)
+        task = TaskModel(task_id, **dados)
         try:
             task.save_task()
         except:

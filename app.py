@@ -33,7 +33,7 @@ def token_de_acesso_invalidado():
 api.add_resource(Tasks, '/tasks')
 api.add_resource(Task, '/tasks/<string:task_id>')
 api.add_resource(User, '/users/<int:user_id>')
-api.add_resource(UserRegister, '/cadastro')
+api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 

@@ -93,16 +93,16 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTg3MDAsIm5iZiI6MTU3MDQxODcwMCwianRpIjoiZmYzOWQ0ZmItN2ZiZS00NTc1LThhNjEtNmQ2ZjdlYTM2YWRlIiwiZXhwIjoxNTcwNDE5NjAwLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.FrobihykCsz7g1rcQxzmh23jgGac73kLZ8l3BY6I5cA",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA1NDk4NjgsIm5iZiI6MTU3MDU0OTg2OCwianRpIjoiYjhjY2UxMTItNDdjNS00YTFlLWI0MGQtZjg5NTgwY2U5YmFjIiwiZXhwIjoxNTcwNTUwNzY4LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.i7a-SllQ1gDHaVflEif8_IRuvfh0ta93dnm_23fA1do",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Cuidar dos cachorros\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participamente\": \"Presença da julia obrigatoria\"\n    \n}"
+					"raw": "{\n    \"nome\": \"Cuidar dos cachorros\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participante\": \"Presença da julia obrigatoria\"\n    \n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/tasks/vender",
+					"raw": "http://127.0.0.1:5000/tasks/vender2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -113,7 +113,7 @@
 					"port": "5000",
 					"path": [
 						"tasks",
-						"vender"
+						"vender2"
 					]
 				}
 			},
@@ -133,12 +133,12 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTg3MDAsIm5iZiI6MTU3MDQxODcwMCwianRpIjoiZmYzOWQ0ZmItN2ZiZS00NTc1LThhNjEtNmQ2ZjdlYTM2YWRlIiwiZXhwIjoxNTcwNDE5NjAwLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.FrobihykCsz7g1rcQxzmh23jgGac73kLZ8l3BY6I5cA"
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA1NDk4NjgsIm5iZiI6MTU3MDU0OTg2OCwianRpIjoiYjhjY2UxMTItNDdjNS00YTFlLWI0MGQtZjg5NTgwY2U5YmFjIiwiZXhwIjoxNTcwNTUwNzY4LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.i7a-SllQ1gDHaVflEif8_IRuvfh0ta93dnm_23fA1do"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Cuidar dos cachorros\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participamente\": \"Presença da julia obrigatoria\"\n    \n}"
+					"raw": "{\n    \"nome\": \"Cuidar dos cachorros EDITADO\",\n    \"descricao\": \"Levar os cachorros ao veterianario tomar a vacina\",\n    \"tipo\": \"facil\",\n    \"dia\": \"10/10/2019\",\n    \"hora\": \"23:59\",\n    \"local\": \"Centro da cidade\",\n    \"participante\": \"Presença da julia obrigatoria\"\n    \n}"
 				},
 				"url": {
 					"raw": "http://127.0.0.1:5000/tasks/vender",
@@ -165,7 +165,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA0MTY0NzEsIm5iZiI6MTU3MDQxNjQ3MSwianRpIjoiNDZjOTM3NjctYzEyZS00NzdlLWIzMmItMDVhMjA0MjAwNDlkIiwiZXhwIjoxNTcwNDE3MzcxLCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.9VZJb3pTRtTSxZI_duHxKhFCO3UgnisbXifSORjU2ds",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzA1NDk4NjgsIm5iZiI6MTU3MDU0OTg2OCwianRpIjoiYjhjY2UxMTItNDdjNS00YTFlLWI0MGQtZjg5NTgwY2U5YmFjIiwiZXhwIjoxNTcwNTUwNzY4LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.i7a-SllQ1gDHaVflEif8_IRuvfh0ta93dnm_23fA1do",
 						"type": "text"
 					}
 				],
@@ -192,7 +192,7 @@
 			"response": []
 		},
 		{
-			"name": "/usuarios/{user_id}",
+			"name": "/users/{user_id}",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -201,7 +201,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/usuarios/1",
+					"raw": "http://127.0.0.1:5000/users/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -211,7 +211,7 @@
 					],
 					"port": "5000",
 					"path": [
-						"usuarios",
+						"users",
 						"1"
 					]
 				}
@@ -219,7 +219,7 @@
 			"response": []
 		},
 		{
-			"name": "/usuarios/{user_id}",
+			"name": "/users/{user_id}",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -228,7 +228,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/usuarios/3",
+					"raw": "http://127.0.0.1:5000/users/3",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -238,7 +238,7 @@
 					],
 					"port": "5000",
 					"path": [
-						"usuarios",
+						"users",
 						"3"
 					]
 				}
@@ -310,7 +310,7 @@
 			"response": []
 		},
 		{
-			"name": "/cadastro",
+			"name": "/register",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -322,10 +322,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"login\": \"admin\",\n\t\"senha\": \"admin\"\n}"
+					"raw": "{\n\t\"login\": \"teste\",\n\t\"senha\": \"teste\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/cadastro",
+					"raw": "http://127.0.0.1:5000/register",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -335,7 +335,7 @@
 					],
 					"port": "5000",
 					"path": [
-						"cadastro"
+						"register"
 					]
 				}
 			},

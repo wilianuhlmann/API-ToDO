@@ -6,24 +6,33 @@ class TaskModel(banco.Model):
 
     task_id = banco.Column(banco.String, primary_key=True)
     nome = banco.Column(banco.String(80))
-    estrelas = banco.Column(banco.Float(precision=1))
-    diaria = banco.Column(banco.Float(precision=2))
-    cidade = banco.Column(banco.String(40))
+    descricao = banco.Column(banco.String(80))
+    tipo = banco.Column(banco.String(80))
+    dia = banco.Column(banco.String(40))
+    hora = banco.Column(banco.String(40))
+    local = banco.Column(banco.String(40))
+    participante = banco.Column(banco.String(40))
 
-    def __init__(self, task_id, nome, estrelas, diaria, cidade):
+    def __init__(self, task_id, nome, descricao, tipo, dia, hora, local, participante):
         self.task_id = task_id
         self.nome = nome
-        self.estrelas = estrelas
-        self.diaria = diaria
-        self.cidade = cidade
+        self.descricao = descricao
+        self.tipo = tipo
+        self.dia = dia
+        self.hora = hora
+        self.local = local
+        self.participante = participante
 
     def json(self):
         return {
             'task_id': self.task_id,
             'nome': self.nome,
-            'estrelas': self.estrelas,
-            'diaria': self.diaria,
-            'cidade': self.cidade
+            'descricao': self.descricao,
+            'tipo': self.tipo,
+            'dia': self.dia,
+            'hora': self.hora,
+            'local': self.local,
+            'participante': self.participante
         }
 
     @classmethod
@@ -37,11 +46,14 @@ class TaskModel(banco.Model):
         banco.session.add(self)
         banco.session.commit()
 
-    def update_task(self, nome, estrelas, diaria, cidade):
+    def update_task(self, nome, descricao, tipo, dia, hora, local, participante):
         self.nome = nome
-        self.estrelas = estrelas
-        self.diaria = diaria
-        self.cidade = cidade
+        self.descricao = descricao
+        self.tipo = tipo
+        self.dia = dia
+        self.hora = hora
+        self.local = local
+        self.participante = participante
 
     def delete_task(self):
         banco.session.delete(self)

@@ -7,3 +7,5 @@ COPY requirement.txt /webapps/
 RUN pip install -r /webapps/requirements.txt
 
 ADD . /webapps/
+
+EXPOSE 8000
